@@ -2174,7 +2174,7 @@
             </div>
             <div class="right-column">
                 <div class="slider-container">
-                    <img id="sliderImage" src="1736422675210.jpg" alt="Slide">
+                    <img id="sliderImage" src="IMG20250126122245.jpg" alt="Slide">
                 </div>
             </div>
         </div>
@@ -2553,23 +2553,30 @@
 
 
     </script>
-    <script>
-        (function () {
-            const images = [
-                "IMG_20240826_33654.jpg",
-                "IMG_20241029_111359.jpg",
-                "IMG_20240826_133654.jpg"
-            ];
-
-            let currentIndex = 0;
-
-            function changeImage() {
-                currentIndex = (currentIndex + 1) % images.length;
-                document.getElementById("sliderImage").src = images[currentIndex];
+   <script>
+    (function () {
+        const images = [
+            "IMG20250126122245.jpg",
+            "IMG_20240826_133654.jpg",
+            "IMG_20241029_111359.jpg"
+        ];
+    
+        let currentIndex = 0;
+        const sliderImage = document.getElementById("sliderImage");
+    
+        console.log("Total images:", images.length); // Debugging step
+    
+        function changeImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            console.log("Changing to image index:", currentIndex, "Image:", images[currentIndex]); // Debug log
+    
+            if (images[currentIndex]) {
+                sliderImage.src = images[currentIndex];
             }
-
-            setInterval(changeImage, 5000);
-        })();
+        }
+    
+        setInterval(changeImage, 5000);
+    })();
     </script>
     /* JS to handle the scroll event */
     <script>
